@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section id="home" class="section home-section">
+    <div class="content">
+        <h1>Welcome to Our Course Offering Website</h1>
+        <p>Explore a wide range of courses tailored for your learning journey. Whether you're a beginner or looking to advance your skills, we have the right courses for you. Start learning today and take the next step in your career!</p>
+    </div>
+</section>
+
+<section id="courses" class="section courses-section" style="background: url('{{ url_for('static', filename='images/background-home.jpg') }}') no-repeat center center;">
+    <div class="content">
+        <h2>Our Courses</h2>
+        <div class="course-cards">
+            <div class="course-card">
+                <h3>Web Development</h3>
+                <p>Master the art of web development...</p>
+                <form method="POST" action="/apply">
+                    <input type="hidden" name="course" value="Web Development">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <button type="submit" class="apply-btn">Apply Now</button>
+                </form>
+            </div>
+            <div class="course-card">
+                <h3>Data Science</h3>
+                <p>Dive into the world of data...</p>
+                <form method="POST" action="/apply">
+                    <input type="hidden" name="course" value="Data Science">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <button type="submit" class="apply-btn">Apply Now</button>
+                </form>
+            </div>
+            <div class="course-card">
+                <h3>Graphic Design</h3>
+                <p>Discover the principles of design...</p>
+                <form method="POST" action="/apply">
+                    <input type="hidden" name="course" value="Graphic Design">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <button type="submit" class="apply-btn">Apply Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section contact-section">
+    <div class="content">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+{% endblock %}
